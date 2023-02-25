@@ -12,3 +12,55 @@
     background-color: #f1f1f1;
     height: 100vh;
 }
+
+.contatiner h1{
+    color: rgb(150, 68, 226);
+}
+.timer{
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color: #333;
+}
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: #249bbe;
+    min-width: 90px;
+}
+.separator{
+    padding: 10px;
+    color: rgb(228, 54, 205);
+}
+#miliseconds{
+    font-size: 30px;
+    color: #631066;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+
+}
+.btn{
+    padding: 10px 20px;
+    font-size: 18px;    
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.btn :hover{
+    transform: scale(1.1);
+}
+.startBtn{
+    background-color: #631066;
+    color:#fff;
+}
+#pauseBtn, #resumeBtn{
+    display: none;
+}
