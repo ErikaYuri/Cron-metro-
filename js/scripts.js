@@ -35,6 +35,9 @@ function startTimer(){
         }
         }, 10);
 
+        startBtn.style.display = "none";
+        pauseBtn.style.display = "block";
+
         }
 
         function formatTime(time) {
@@ -42,6 +45,6 @@ function startTimer(){
         }
 
         function formatMilliseconds(time){
-            return time < 100? time.padStart(3, "0") : time;
+            return time < 100? `${time}`.padStart(3, "0") : time;
         }
   
