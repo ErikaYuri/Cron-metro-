@@ -13,6 +13,9 @@ let milliseconds = 0;
 let ispaused = false;
 
 startBtn.addEventListener("click", startTimer);
+pauseBtn.addEventListener("click", pauseTimer);
+resumeBtn.addEventListener("click", resumeTimer);
+resetBtn.addEventListener("click", resetTimer);
 
 function startTimer(){
     interval = setInterval (() =>{
@@ -39,6 +42,28 @@ function startTimer(){
         pauseBtn.style.display = "block";
 
         }
+        function pauseTimer(){
+            ispaused = true;
+            pauseBtn.style.display = "none";
+            resumeBtn.requestFullscreen.display = "block";
+        }
+        function resumeTimer(){
+            ispaused = false;
+            pauseBtn.style.display = "block";
+            resumeBtn.style.display = "none";
+        }
+
+        function resetTimer(){
+            clearInterval(interval);
+            minutes = 0;
+            seconds = 0;
+            milliseconds = 0;
+
+            startBtn.style.display = "block";
+            pauseBtn.style.display = "none";
+            resumeBtn.style.display = "none";
+        }    
+        
 
         function formatTime(time) {
             return time > 10? `0${time}`: time;
